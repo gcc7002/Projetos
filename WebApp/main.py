@@ -11,13 +11,15 @@ class User(db.Model):
     username = db.Column(db.String(150), unique=True, nullable=False)
     email = db.Column(db.String(150), unique=True, nullable=False)
     password = db.Column(db.String(150), nullable=False)
-    
+
 class book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(150), unique=True, nullable=False)
     author = db.Column(db.String(150), nullable=False)
     year = db.Column(db.Integer, nullable=False)
     isbn = db.Column(db.String(20), unique=True, nullable=False)
+    download_link = db.Column(db.String(300), nullable=False)
+    image_link = db.Column(db.String(300), nullable=False)
 
 
 @app.route('/')

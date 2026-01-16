@@ -4,22 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your profile</title>
+    <link rel="stylesheet" href="static/main.css" />
   </head>
   <body>
     <h1>Welcome</h1>
-    {% for book in books %}
-    <div>
-      <h2>{{ book.title }}</h2>
-      <button
-        type="button"
-        href="https://archive.org/details/collectorssticke0000scho"
-      >
-        Download
-      </button>
-      <p>Author: {{ book.author }}</p>
-      <p>Year: {{ book.year }}</p>
-      <p>ISBN: {{ book.isbn }}</p>
-    </div>
-    {% endfor %}
+    <section class="books-catalogue">
+      {% for book in books %}
+      <section class="book-section">
+        <div class="book-card">
+          <h2>{{ book.title }}</h2>
+          <p>Author: {{ book.author }}</p>
+          <p>Year: {{ book.year }}</p>
+          <p>ISBN: {{ book.isbn }}</p>
+        </div>
+      </section>
+      {% endfor %}
+    </section>
   </body>
 </html>
