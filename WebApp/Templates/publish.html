@@ -6,21 +6,28 @@
     <title>Post</title>
   </head>
   <body>
-    <form action="/publish/{{ book.id }}" method="post">
+    <h1>Publish your book</h1>
+    <form action="/Publish" method="post" enctype="multipart/form-data">
       <label for="title">Title:</label>
-      <input type="text" id="title" name="title" required /><br />
+      <input type="text" id="title" name="title" required /><br /><br />
 
       <label for="author">Author:</label>
-      <input type="text" id="author" name="author" required /><br />
+      <input type="text" id="author" name="author" required /><br /><br />
 
       <label for="year">Year:</label>
-      <input type="number" id="year" name="year" required /><br />
+      <input type="number" id="year" name="year" required /><br /><br />
 
       <label for="isbn">ISBN:</label>
-      <input type="text" id="isbn" name="isbn" required /><br />
+      <input type="text" id="isbn" name="isbn" required /><br /><br />
 
-      <label for="image">Image URL:</label>
-      <input type="url" id="image" name="image" required /><br />
+      <label for="image">Cover Image:</label>
+      <input
+        type="text"
+        id="image"
+        name="image"
+        accept="image/*"
+        required
+      /><br /><br />
 
       <label for="download_link">Download Link:</label>
       <input
@@ -28,7 +35,7 @@
         id="download_link"
         name="download_link"
         required
-      /><br />
+      /><br /><br />
 
       <input type="submit" value="Publish" />
     </form>
