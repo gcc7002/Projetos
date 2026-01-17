@@ -1,4 +1,4 @@
-# Flask Authentication System
+# Flask digital library
 
 A simple user authentication system built with Flask and SQLAlchemy.
 
